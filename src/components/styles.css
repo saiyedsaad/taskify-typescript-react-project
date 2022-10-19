@@ -44,20 +44,40 @@
   box-shadow: 0 0 5px black;
 }
 
+.container {
+  display: flex;
+  width: 95%;
+  margin-top: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .todos {
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  width: 90%;
+  width: 47.5%;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: rgb(50, 195, 205);
+}
+
+.todos-heading {
+  font-size: 25px;
+  color: white;
 }
 
 .todos-single {
   display: flex;
-  width: 29.5%;
   border-radius: 5px;
   padding: 20px;
   margin-top: 15px;
-  background-image: linear-gradient(to right, #fab005, #f08c00);
+  background-image: url("https://img.freepik.com/free-photo/vintage-crumpled-paper-textured-background_53876-103940.jpg?w=996&t=st=1666093099~exp=1666093699~hmac=beb4b90c2c5dc0a953b0ddb6bcc7d5ae8f4af721db8576339f0ea99abf83faa8");
+  transition: all 0.2s;
+}
+
+.todos-single:hover {
+  box-shadow: 0 0 5px black;
+  transform: scale(1.03);
 }
 
 .todos-single-text {
@@ -77,9 +97,9 @@
   cursor: pointer;
 }
 
-@media (max-width: 1200px) {
-  .todos-single {
-    width: 40%;
+@media (max-width: 1100px) {
+  .todos {
+    width: 45%;
   }
 }
 
@@ -90,9 +110,27 @@
 
   .todos {
     width: 95%;
+    margin-bottom: 10px;
   }
 
-  .todos-single {
-    width: 100%;
+  .container {
+    width: 95%;
+    flex-direction: column;
   }
+}
+
+.remove {
+  background-color: #c92a2a;
+}
+
+.drag-active {
+  background-color: rgb(0, 221, 236);
+}
+
+.drag-complete {
+  background-color: #d50d0d;
+}
+
+.drag {
+  box-shadow: 0 0 20px black;
 }
